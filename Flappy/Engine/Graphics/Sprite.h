@@ -11,9 +11,16 @@ using namespace std;
 class Sprite {
 public:
 	Sprite();
-	//Sprite();
-private:
+	Sprite(string imagePath);
+	Sprite(string imagePath, float _xPos, float _yPos);
 
+	void update();
+	void render();
+
+private:
+	Texture texture;
+	float xPos;
+	float yPos;
 };
 
 #endif // !BOB_SPRITE
