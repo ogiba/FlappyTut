@@ -58,9 +58,11 @@ void Engine::update() {
 	glfwPollEvents();
 }
 
-void Engine::render() {
+void Engine::beginRender() {
 	glClearColor(0, 1, 0, 1);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
 
+void Engine::endRender() {
 	glfwSwapBuffers(window);
 }

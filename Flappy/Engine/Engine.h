@@ -19,7 +19,8 @@ public:
 	bool initialize(char* windowTitle);
 
 	void update();
-	void render();
+	void beginRender();
+	void endRender();
 
 private:
 	static GLFWwindow* window;
