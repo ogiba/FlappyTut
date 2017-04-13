@@ -1,5 +1,6 @@
 #include "Engine/Engine.h"
 #include "Engine/Graphics/Sprite.h"
+#include "Engine/IO/Mouse.h"
 
 #include <iostream>
 using namespace std;
@@ -18,7 +19,9 @@ int main() {
 
 		testSprite.update();
 
-		engine.beginRender();
+		testSprite.setPos((float)Mouse::getMouseX(), (float)Mouse::getMouseY());
+
+		engine.beginRender(); 
 		testSprite.render();
 		engine.endRender();
 	}
